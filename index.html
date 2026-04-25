@@ -12,47 +12,50 @@
             --accent-pink: #E8D5D5; --border-radius: 16px; --expense-color: #D28E8E;
         }
 
-        body { font-family: 'PingFang TC', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 20px 15px; display: flex; justify-content: center; }
+        body { font-family: 'PingFang TC', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 20px 15px; display: flex; justify-content: center; text-align: left; }
         .container { width: 100%; max-width: 480px; }
         header { text-align: center; margin-bottom: 25px; }
         header h1 { font-size: 22px; font-weight: 500; color: var(--primary-dark); }
 
         /* 首頁導覽 */
         .nav-group { display: flex; gap: 10px; margin-bottom: 20px; }
-        .nav-btn { flex: 1; padding: 12px; border-radius: 12px; border: 1px solid var(--primary-color); background: white; color: var(--primary-color); font-weight: 600; cursor: pointer; }
+        .nav-btn { flex: 1; padding: 12px; border-radius: 12px; border: 1px solid var(--primary-color); background: white; color: var(--primary-color); font-weight: 600; cursor: pointer; text-align: center; }
         .nav-btn.active { background: var(--primary-color); color: white; }
 
-        /* 分頁標籤 */
+        /* 分頁看板標籤 */
         .detail-tabs { display: flex; overflow-x: auto; gap: 10px; border-bottom: 1px solid #EBE6E0; margin-bottom: 15px; padding-bottom: 5px; -webkit-overflow-scrolling: touch; }
         .tab-item { font-size: 13px; color: var(--text-light); white-space: nowrap; padding: 8px 10px; cursor: pointer; border-bottom: 2px solid transparent; }
         .tab-item.active { color: var(--primary-dark); border-bottom-color: var(--primary-color); font-weight: 600; }
 
-        .card { background: var(--card-bg); padding: 18px; border-radius: var(--border-radius); box-shadow: 0 4px 12px rgba(0,0,0,0.03); margin-bottom: 15px; position: relative; }
-        .section-title { font-size: 15px; font-weight: 600; color: var(--primary-dark); border-left: 4px solid var(--accent-pink); padding-left: 10px; margin: 15px 0 10px; }
+        .card { background: var(--card-bg); padding: 18px; border-radius: var(--border-radius); box-shadow: 0 4px 12px rgba(0,0,0,0.03); margin-bottom: 15px; position: relative; text-align: left; }
+        .section-title { font-size: 15px; font-weight: 600; color: var(--primary-dark); border-left: 4px solid var(--accent-pink); padding-left: 10px; margin: 15px 0 10px; text-align: left; }
         
-        .form-group { margin-bottom: 15px; }
-        label { display: block; font-size: 13px; margin-bottom: 5px; color: var(--text-light); }
-        input, select, textarea { width: 100%; padding: 10px; border: 1px solid #EBE6E0; border-radius: 8px; font-size: 14px; box-sizing: border-box; background: #FAFAFA; outline: none; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; font-size: 13px; margin-bottom: 5px; color: var(--text-light); text-align: left; }
+        input, select, textarea { width: 100%; padding: 10px; border: 1px solid #EBE6E0; border-radius: 8px; font-size: 14px; box-sizing: border-box; background: #FAFAFA; outline: none; text-align: left; }
         
         .radio-group, .checkbox-group { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 5px; }
-        .item-box { display: flex; align-items: center; font-size: 13px; background: #FDFBF8; padding: 8px; border-radius: 8px; border: 1px solid #EEE; cursor: pointer; }
+        .item-box { display: flex; align-items: center; font-size: 13px; background: #FDFBF8; padding: 8px; border-radius: 8px; border: 1px solid #EEE; cursor: pointer; text-align: left; }
         .item-box input { width: auto; margin-right: 5px; }
 
-        .sub-input { display: none; margin-top: 8px; padding-left: 10px; border-left: 2px solid var(--accent-pink); }
+        .sub-input { display: none; margin-top: 8px; padding-left: 10px; border-left: 2px solid var(--accent-pink); text-align: left; }
         .sig-wrapper { border: 1px solid #EBE6E0; border-radius: 10px; background: #FFF; margin: 10px 0; touch-action: none; }
         canvas { width: 100%; height: 160px; border-radius: 10px; }
 
-        .submit-btn { width: 100%; background: var(--primary-color); color: white; border: none; padding: 14px; font-size: 16px; border-radius: 10px; cursor: pointer; font-weight: 600; margin-top: 10px; }
-        .customer-item { background: white; padding: 15px; border-radius: 12px; margin-bottom: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); cursor: pointer; }
+        .submit-btn { width: 100%; background: var(--primary-color); color: white; border: none; padding: 14px; font-size: 16px; border-radius: 10px; cursor: pointer; font-weight: 600; margin-top: 10px; text-align: center; }
+        .customer-item { background: white; padding: 15px; border-radius: 12px; margin-bottom: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); cursor: pointer; text-align: left; }
 
-        table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 10px; }
-        table th, table td { border: 1px solid #EBE6E0; padding: 8px; text-align: left; }
+        /* 課程紀錄表格樣式 */
+        .table-container { width: 100%; overflow-x: auto; margin-top: 10px; }
+        table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 480px; text-align: left; }
+        table th, table td { border: 1px solid #EBE6E0; padding: 8px; text-align: left; vertical-align: top; }
         table th { background: #FDFBF8; color: var(--primary-dark); }
 
-        .wallet-card { background: #FDFBF8; border: 1px solid var(--accent-pink); border-radius: 10px; padding: 12px; margin-bottom: 10px; }
+        .wallet-card { background: #FDFBF8; border: 1px solid var(--accent-pink); border-radius: 10px; padding: 12px; margin-bottom: 10px; position: relative; text-align: left; }
+        .info-text { font-size: 12px; line-height: 1.6; color: var(--text-main); margin-bottom: 10px; text-align: left; }
 
         .hidden { display: none; }
-        .loading-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.8); display: none; justify-content: center; align-items: center; z-index: 3000; }
+        .loading-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.8); display: none; justify-content: center; align-items: center; z-index: 5000; }
     </style>
 </head>
 <body>
@@ -84,8 +87,8 @@
 
         <div id="tabInfo" class="tab-content card">
             <div style="position:absolute; top:15px; right:15px; display:flex; gap:8px;">
-                <button onclick="editMode()" style="color:var(--primary-dark); font-size:11px; border:1px solid; border-radius:4px; padding:2px 6px;">(編輯)</button>
-                <button onclick="deleteCustomer()" style="color:var(--expense-color); font-size:11px; border:1px solid; border-radius:4px; padding:2px 6px;">(刪除)</button>
+                <button onclick="editMode()" style="color:var(--primary-dark); font-size:11px; border:1px solid; border-radius:4px; padding:2px 6px;">編輯</button>
+                <button onclick="deleteCustomer()" style="color:var(--expense-color); font-size:11px; border:1px solid; border-radius:4px; padding:2px 6px;">刪除</button>
             </div>
             <div id="viewBasicContent" style="font-size:13px; line-height:1.7;"></div>
         </div>
@@ -104,8 +107,8 @@
             <div class="checkbox-group" id="lashFlow">
                 <label class="item-box"><input type="checkbox" value="直"> 直</label><label class="item-box"><input type="checkbox" value="垂"> 垂</label>
                 <label class="item-box"><input type="checkbox" value="整齊"> 整齊</label><label class="item-box"><input type="checkbox" value="歪"> 歪</label>
-                <label class="item-box"><input type="checkbox" value="自然捲"> 自然捲</label>
-                <label class="item-box"><input type="checkbox" value="右亂"> 右眼頭/眼尾亂</label><label class="item-box"><input type="checkbox" value="左亂"> 左眼頭/眼尾亂</label>
+                <label class="item-box"><input type="checkbox" value="自然捲"> 自然捲</label><label class="item-box"><input type="checkbox" value="右亂"> 右眼頭/眼尾亂</label>
+                <label class="item-box"><input type="checkbox" value="左亂"> 左眼頭/眼尾亂</label>
             </div>
             <div class="section-title">3. 眼型/眼位 (多選)</div>
             <div class="checkbox-group" id="eyeShape">
@@ -116,144 +119,127 @@
                 <label class="item-box"><input type="checkbox" value="眼凸"> 眼凸</label><label class="item-box"><input type="checkbox" value="眉眼近"> 眉眼間距近</label>
                 <label class="item-box"><input type="checkbox" value="眉眼寬"> 眉眼間距寬</label>
             </div>
-            <button class="submit-btn" onclick="saveLashRecord()">儲存更新紀錄</button>
+            <button class="submit-btn" onclick="saveLashStatus()">儲存專業紀錄</button>
         </div>
 
         <div id="tabCourse" class="tab-content card hidden">
-            <div class="section-title">新增課程紀錄</div>
+            <div class="section-title">新增/編輯課程紀錄</div>
             <div class="form-group"><label>日期</label><input type="date" id="courseDate"></div>
-            <div class="form-group"><label>項目</label><select id="courseItem"><option value="睫毛管理">睫毛管理</option><option value="下睫毛">下睫毛</option><option value="眉形雕塑">眉形雕塑</option></select></div>
             <div class="form-group"><label>訴求</label><input type="text" id="courseDemand"></div>
-            <div class="form-group"><label>課程明細填寫</label>
-                <div style="font-size:12px; color:var(--text-light); border:1px solid #EEE; padding:10px; border-radius:8px;">
-                    1劑停留____分、補軟____分<br>2劑停留____分、補_____分<br>濃黑_____分<br>墊片選擇:右眼_______、左眼_______
-                </div>
-                <textarea id="courseDetailText" rows="3" style="margin-top:5px;" placeholder="填寫上方明細內容..."></textarea>
+            <div class="form-group"><label>課程項目</label><select id="courseType"><option value="睫毛管理">睫毛管理</option><option value="下睫毛">下睫毛</option><option value="眉形雕塑">眉形雕塑</option></select></div>
+            <div class="form-group" style="background:#FDFBF8; padding:10px; border-radius:8px;">
+                <label>課程操作細節</label>
+                1劑停留 <input type="number" id="c1" style="width:45px; display:inline;"> 分、補軟 <input type="number" id="cSoft" style="width:45px; display:inline;"> 分<br>
+                2劑停留 <input type="number" id="c2" style="width:45px; display:inline;"> 分、補 <input type="number" id="cFix" style="width:45px; display:inline;"> 分<br>
+                濃黑 <input type="number" id="cDark" style="width:45px; display:inline;"> 分<br>
+                墊片選擇: 右眼 <input type="text" id="cPadR" style="width:70px; display:inline;">、左眼 <input type="text" id="cPadL" style="width:70px; display:inline;">
             </div>
-            <div class="form-group"><label>結果 (術後關心)</label><textarea id="courseResult"></textarea></div>
-            <button class="submit-btn" onclick="addCourse()">新增紀錄</button>
-            <div id="courseTableArea" style="margin-top:20px;"></div>
+            <div class="form-group"><label>結果 (術後關心狀態)</label><textarea id="courseResult" rows="2"></textarea></div>
+            <button class="submit-btn" onclick="addCourseRecord()">儲存本次紀錄</button>
+            <div class="table-container"><table id="courseTable"><thead><tr><th>日期</th><th>訴求</th><th>課程細節</th><th>結果</th></tr></thead><tbody></tbody></table></div>
         </div>
 
         <div id="tabWallet" class="tab-content card hidden">
-            <div id="walletCards"></div>
-            <div class="section-title">建立新卡夾</div>
+            <div id="walletCardsArea"></div>
+            <div class="section-title">建立新儲值卡夾</div>
+            <div class="form-group"><label>儲值日期</label><input type="date" id="wDate"></div>
             <div class="form-group"><label>項目</label><select id="wItem"><option value="睫毛管理">睫毛管理</option><option value="眉形雕塑">眉形雕塑</option><option value="組合">組合</option></select></div>
-            <div class="form-group"><label>總堂數</label><input type="number" id="wTotal"></div>
+            <div class="form-group"><label>堂數</label><input type="number" id="wTotal"></div>
             <button class="submit-btn" onclick="addNewWallet()">建立卡夾</button>
         </div>
 
-        <div id="tabHistory" class="tab-content card hidden">
-            <div id="paymentArea"></div>
-        </div>
+        <div id="tabHistory" class="tab-content card hidden"><div id="paymentHistoryArea"></div></div>
 
         <div id="tabMemo" class="tab-content card hidden">
-            <textarea id="memoInput" rows="15" placeholder="輸入備註內容..."></textarea>
+            <textarea id="memoText" rows="15" placeholder="預留空白可供填寫備註..."></textarea>
             <button class="submit-btn" onclick="saveMemo()">更新備註</button>
         </div>
     </div>
 
-    <div id="pageForm" class="hidden">
-        <div class="card">
-            <h2 style="text-align:center;">睫毛管理同意書</h2>
-            <div class="section-title">基本資料</div>
-            <div class="form-group"><label>真實姓名</label><input type="text" id="fName"></div>
-            <div class="form-group"><label>暱稱</label><input type="text" id="fNickname"></div>
-            <div class="form-group"><label>生日(出生年月日)</label><input type="date" id="fBirthday"></div>
-            <div class="form-group"><label>連絡電話</label><input type="tel" id="fPhone"></div>
+    <div id="pageForm" class="hidden card">
+        <h2 style="text-align:center;">< 睫毛管理同意書 ></h2>
+        <div class="section-title">基本資料</div>
+        <div class="form-group"><label>真實姓名</label><input type="text" id="fName"></div>
+        <div class="form-group"><label>暱稱</label><input type="text" id="fNickname"></div>
+        <div class="form-group"><label>生日(出生年月日)</label><input type="date" id="fBirthday"></div>
+        <div class="form-group"><label>連絡電話</label><input type="tel" id="fPhone"></div>
 
-            <div class="section-title">健康狀況調查</div>
-            <div class="form-group"><label>是否正在懷孕或哺乳?</label>
-                <div class="radio-group"><label class="item-box"><input type="radio" name="preg" value="否" checked> 否</label><label class="item-box"><input type="radio" name="preg" value="是"> 是</label></div>
-            </div>
-            <div class="form-group"><label>1. 過去3個月內動過眼部手術、割雙眼皮或紋眼線？</label>
-                <div class="radio-group"><label class="item-box"><input type="radio" name="surg" value="否" checked onclick="toggleSub('surgSub',false)"> 否</label><label class="item-box"><input type="radio" name="surg" value="是" onclick="toggleSub('surgSub',true)"> 是</label></div>
-                <div id="surgSub" class="sub-input"><input type="text" id="surgDet" placeholder="內容與時間"></div>
-            </div>
-            <div class="form-group"><label>2. 是否為過敏性體質？</label>
-                <div class="radio-group"><label class="item-box"><input type="radio" name="allergy" value="否" checked onclick="toggleSub('allSub',false)"> 否</label><label class="item-box"><input type="radio" name="allergy" value="是" onclick="toggleSub('allSub',true)"> 是</label></div>
-                <div id="allSub" class="sub-input">
-                    <select id="allType" onchange="toggleSub('allOther', this.value==='其他')"><option value="異位性皮膚炎">異位性皮膚炎</option><option value="白血病">白血病</option><option value="血友病">血友病</option><option value="其他">其他</option></select>
-                    <div id="allOther" class="sub-input" style="border-left:none;"><input type="text" id="allDet" placeholder="說明體質"></div>
-                </div>
-            </div>
-            <div class="form-group"><label>3. 目前是否有眼睛或眼皮過敏或腫脹問題？</label>
-                <div class="radio-group"><label class="item-box"><input type="radio" name="swell" value="否" checked onclick="toggleSub('swellSub',false)"> 否</label><label class="item-box"><input type="radio" name="swell" value="是" onclick="toggleSub('swellSub',true)"> 是</label></div>
-                <div id="swellSub" class="sub-input"><input type="text" id="swellDet" placeholder="對甚麼物質容易引發過敏"></div>
-            </div>
-            <div class="form-group"><label>4. 眼睛四周皮膚是否曾發生接觸性皮膚炎？</label>
-                <div class="radio-group"><label class="item-box"><input type="radio" name="derm" value="否" checked onclick="toggleSub('dermSub',false)"> 否</label><label class="item-box"><input type="radio" name="derm" value="是" onclick="toggleSub('dermSub',true)"> 是</label></div>
-                <div id="dermSub" class="sub-input"><input type="text" id="dermDet" placeholder="對甚麼物質容易引發過敏?如:膠帶..."></div>
-            </div>
-            <div class="form-group"><label>5. 是否有眼睛方面疾病？</label>
-                <div class="radio-group"><label class="item-box"><input type="radio" name="eDis" value="否" checked onclick="toggleSub('eDisSub',false)"> 否</label><label class="item-box"><input type="radio" name="eDis" value="是" onclick="toggleSub('eDisSub',true)"> 是</label></div>
-                <div id="eDisSub" class="sub-input"><input type="text" id="eDisDet" placeholder="針眼、角膜炎、結膜炎..."></div>
-            </div>
-
-            <div class="section-title">個別事項紀錄</div>
-            <div class="form-group"><label>每日卸妝時所使用的清潔產品?</label>
-                <select id="cleaner"><option value="卸妝水">卸妝水</option><option value="卸妝乳">卸妝乳</option><option value="卸妝油">卸妝油</option><option value="其他">其他</option></select>
-            </div>
-            <div class="form-group"><label>是否有嫁接睫毛經驗？</label>
-                <div class="radio-group"><label class="item-box"><input type="radio" name="expLash" value="否" checked onclick="toggleSub('expLSub',false)"> 否</label><label class="item-box"><input type="radio" name="expLash" value="是" onclick="toggleSub('expLSub',true)"> 是</label></div>
-                <div id="expLSub" class="sub-input"><input type="text" id="expFreq" placeholder="平均多久嫁接一次?"></div>
-            </div>
-            <div class="form-group"><label>是否有做睫毛管理習慣?</label>
-                <div class="radio-group"><label class="item-box"><input type="radio" name="habit" value="否" checked onclick="toggleSub('habSub',false)"> 否</label><label class="item-box"><input type="radio" name="habit" value="是" onclick="toggleSub('habSub',true)"> 是</label></div>
-                <div id="habSub" class="sub-input"><input type="text" id="habFreq" placeholder="大約多久一次?"></div>
-            </div>
-
-            <div class="section-title">保養方式</div>
-            <div style="font-size:12px; line-height:1.6; color:var(--text-main);">
-                1. 洗臉時避免水柱直接沖洗眼睛，建議用毛巾拭乾。<br>
-                2. 每天早晚或洗臉後，使用睫毛梳輕輕順向梳理，防止睫毛交纏倒插。<br>
-                3. 建議早晚擦拭睫毛增長液或滋養液，修復受損毛鱗片，讓原生睫毛更強韌。<br>
-                4. 不可再使用睫毛夾(會破壞定型或造成原生睫毛斷裂)。<br>
-                * 睫毛有自然週期（日脫1-5根屬正常），維持約4-6週，建議定期回店整理。
-            </div>
-
-            <div class="section-title">注意事項 [請詳閱並打勾、簽名]</div>
-            <div class="notice-item" style="display:flex; align-items:flex-start; margin-bottom:10px;">
-                <input type="checkbox" class="fCheck" style="margin-top:4px;"> <span style="font-size:12px; margin-left:8px;">1. 我知道本身有任何過敏或眼睛不適現象將事先告知。若因個人體質或衛生問題產生不適，店家享有免責權。</span>
-            </div>
-            <div class="notice-item" style="display:flex; align-items:flex-start; margin-bottom:10px;">
-                <input type="checkbox" class="fCheck" style="margin-top:4px;"> <span style="font-size:12px; margin-left:8px;">2. 我知道施作過程中，可能發生暫時紅腫、流淚，若當有任何刺痛、燻眼感須立即告知。經處理仍有不適卻堅持施作者自負。</span>
-            </div>
-            <div class="notice-item" style="display:flex; align-items:flex-start; margin-bottom:10px;">
-                <input type="checkbox" class="fCheck" style="margin-top:4px;"> <span style="font-size:12px; margin-left:8px;">3. 我知道因習慣及保養不同，店家無法提供保固期。任何問題將誠心協助。</span>
-            </div>
-            <div class="notice-item" style="display:flex; align-items:flex-start; margin-bottom:10px;">
-                <input type="checkbox" class="fCheck" style="margin-top:4px;"> <span style="font-size:12px; margin-left:8px;">4. 我知道完成效果取決於先天條件，左右眼可能存在細微非對稱性。</span>
-            </div>
-            <div class="notice-item" style="display:flex; align-items:flex-start; margin-bottom:10px;">
-                <input type="checkbox" class="fCheck" style="margin-top:4px;"> <span style="font-size:12px; margin-left:8px;">5. 我知道術後24小時內須保持乾燥，避免夾睫毛、揉眼睛。</span>
-            </div>
-
-            <div class="section-title">肖像使用授權聲明</div>
-            <div style="font-size:11px; line-height:1.6; background:#FDFBF8; padding:10px; border-radius:8px;">
-                *本人同意免費提供店家使用授權肖像來展示及宣傳期服務項目。店家可用於設計、製作、印刷等各有廣告宣傳資料成以各種方式來呈現授權肖像之全部或部分公開發表，及著作權法賦予著作權人之所擁有之權益。店家可無須再通知或經本人同意，但於公開發表時必須尊重本人個人形象，不得發表於非正當管道(如色情網站或書刊、交友網站或違反社會風俗之貼圖網站)。
-            </div>
-            <div class="radio-group" style="margin-top:10px;">
-                <label class="item-box"><input type="radio" name="portrait" value="同意" checked> 同意</label>
-                <label class="item-box"><input type="radio" name="portrait" value="不同意"> 不同意</label>
-            </div>
-
-            <p style="font-size:11px; margin-top:20px; font-weight:600;">「本人已充分了解上述注意事項，並確認目前眼部狀況適合施作。施作後若因個人體質、後續保養不當或自然代謝導致之效果影響，本人願自行承擔，特此簽名同意。」</p>
-            <div class="sig-wrapper"><canvas id="f-sig-canvas"></canvas></div>
-            <div style="text-align:right; font-size:12px; color:var(--expense-color); cursor:pointer;" onclick="fSigPad.clear()">重新簽名</div>
-            
-            <button class="submit-btn" onclick="saveNewCustomer()">確認並建立客戶資料</button>
+        <div class="section-title">健康狀況調查</div>
+        <div class="form-group"><label>是否正在懷孕或哺乳?</label>
+            <div class="radio-group"><label class="item-box"><input type="radio" name="preg" value="否" checked> 否</label><label class="item-box"><input type="radio" name="preg" value="是"> 是</label></div>
         </div>
+        <div class="form-group"><label>1. 過去3個月內是否動過眼部手術、割雙眼皮或紋眼線？</label>
+            <div class="radio-group"><label class="item-box"><input type="radio" name="surg" value="否" checked onclick="toggleSub('surgSub',false)"> 否</label><label class="item-box"><input type="radio" name="surg" value="是" onclick="toggleSub('surgSub',true)"> 是</label></div>
+            <div id="surgSub" class="sub-input"><input type="text" id="surgDet" placeholder="內容與時間"></div>
+        </div>
+        <div class="form-group"><label>2. 是否為過敏性體質？</label>
+            <div class="radio-group"><label class="item-box"><input type="radio" name="all" value="否" checked onclick="toggleSub('allSub',false)"> 否</label><label class="item-box"><input type="radio" name="all" value="是" onclick="toggleSub('allSub',true)"> 是</label></div>
+            <div id="allSub" class="sub-input">
+                <select id="allType" onchange="toggleSub('allOther',this.value==='其他')"><option value="異位性皮膚炎">異位性皮膚炎</option><option value="白血病">白血病</option><option value="血友病">血友病</option><option value="其他">其他</option></select>
+                <div id="allOther" class="sub-input" style="border-left:none;"><input type="text" id="allDet" placeholder="填寫說明內容"></div>
+            </div>
+        </div>
+        <div class="form-group"><label>3. 目前是否有眼睛或眼皮過敏或腫脹問題？</label>
+            <div class="radio-group"><label class="item-box"><input type="radio" name="swell" value="否" checked onclick="toggleSub('swellSub',false)"> 否</label><label class="item-box"><input type="radio" name="swell" value="是" onclick="toggleSub('swellSub',true)"> 是</label></div>
+            <div id="swellSub" class="sub-input"><input type="text" id="swellDet" placeholder="對甚麼物質容易引發過敏"></div>
+        </div>
+        <div class="form-group"><label>4. 眼睛四周皮膚是否曾發生接觸性皮膚炎？</label>
+            <div class="radio-group"><label class="item-box"><input type="radio" name="derm" value="否" checked onclick="toggleSub('dermSub',false)"> 否</label><label class="item-box"><input type="radio" name="derm" value="是" onclick="toggleSub('dermSub',true)"> 是</label></div>
+            <div id="dermSub" class="sub-input"><input type="text" id="dermDet" placeholder="對甚麼物質容易引發過敏?如:膠帶..."></div>
+        </div>
+        <div class="form-group"><label>5. 是否有眼睛方面疾病？</label>
+            <div class="radio-group"><label class="item-box"><input type="radio" name="eDis" value="否" checked onclick="toggleSub('eDisSub',false)"> 否</label><label class="item-box"><input type="radio" name="eDis" value="是" onclick="toggleSub('eDisSub',true)"> 是</label></div>
+            <div id="eDisSub" class="sub-input"><input type="text" id="eDisDet" placeholder="針眼、角膜炎、結膜炎..."></div>
+        </div>
+
+        <div class="section-title">個別事項紀錄</div>
+        <div class="form-group"><label>每日卸妝時所使用的清潔產品?</label><select id="fClean"><option value="卸妝水">卸妝水</option><option value="卸妝乳">卸妝乳</option><option value="卸妝油">卸妝油</option><option value="其他">其他</option></select></div>
+        <div class="form-group"><label>是否有嫁接睫毛經驗？</label>
+            <div class="radio-group"><label class="item-box"><input type="radio" name="expL" value="否" checked onclick="toggleSub('expLSub',false)"> 否</label><label class="item-box"><input type="radio" name="expL" value="是" onclick="toggleSub('expLSub',true)"> 是</label></div>
+            <div id="expLSub" class="sub-input"><input type="text" id="expFreq" placeholder="平均多久嫁接一次?"></div>
+        </div>
+        <div class="form-group"><label>是否有做睫毛管理習慣?</label>
+            <div class="radio-group"><label class="item-box"><input type="radio" name="habit" value="否" checked onclick="toggleSub('habSub',false)"> 否</label><label class="item-box"><input type="radio" name="habit" value="是" onclick="toggleSub('habSub',true)"> 是</label></div>
+            <div id="habSub" class="sub-input"><input type="text" id="habFreq" placeholder="大約多久一次?"></div>
+        </div>
+
+        <div class="section-title">保養方式</div>
+        <div class="info-text">
+            1. 洗臉時避免水柱直接沖洗眼睛，建議用毛巾拭乾。<br>
+            2. 每天早晚或洗臉後，使用睫毛梳輕輕順向梳理，防止睫毛交纏倒插。<br>
+            3. 建議早晚擦拭睫毛增長液或滋養液，修復受損毛鱗片，讓原生睫毛更強韌。<br>
+            4. 不可再使用睫毛夾(會破壞定型或造成原生睫毛斷裂)。<br>
+            * 睫毛有自然週期（日脫1-5根屬正常），維持約4-6週，建議定期回店整理。
+        </div>
+
+        <div class="section-title">注意事項 [請詳閱並打勾、簽名]</div>
+        <div class="form-group"><label class="item-box"><input type="checkbox" class="fCheck"> 1. 我知道本身有任何過敏或眼睛不適現象將事先告知。若因個人體質或衛生問題產生不適，店家享有免責權。</label></div>
+        <div class="form-group"><label class="item-box"><input type="checkbox" class="fCheck"> 2. 我知道施作過程中，可能發生暫時紅腫、流淚，若當有任何刺痛、燻眼感須立即告知。經處理仍有不適卻堅持施作者需自行負責。</label></div>
+        <div class="form-group"><label class="item-box"><input type="checkbox" class="fCheck"> 3. 我知道因習慣及保養不同，店家無法提供保固期。任何問題將誠心協助。</label></div>
+        <div class="form-group"><label class="item-box"><input type="checkbox" class="fCheck"> 4. 我知道完成效果取決於先天條件，左右眼可能存在細微非對稱性。</label></div>
+        <div class="form-group"><label class="item-box"><input type="checkbox" class="fCheck"> 5. 我知道術後24小時內須保持乾燥，避免夾睫毛、揉眼睛。</label></div>
+
+        <div class="section-title">肖像使用授權聲明</div>
+        <div class="info-text" style="background:#FDFBF8; padding:10px; border-radius:8px;">
+            *本人同意免費提供店家使用授權肖像來展示及宣傳期服務項目。店家可用於設計、製作、印刷等各有廣告宣傳資料成以各種方式來呈現授權肖像之全部或部分公開發表，及著作權法賦予著作權人之所擁有之權益。店家可無須再通知或經本人同意，但於公開發表時必須尊重本人個人形象，不得發表於非正當管道(如色情網站或書刊、交友網站或違反社會風俗之貼圖網站)。
+        </div>
+        <div class="radio-group"><label class="item-box"><input type="radio" name="fPort" value="同意" checked> 同意</label><label class="item-box"><input type="radio" name="fPort" value="不同意"> 不同意</label></div>
+
+        <p style="font-size:12px; margin-top:20px; font-weight:600;">「本人已充分了解上述注意事項，並確認目前眼部狀況適合施作。施作後若因個人體質、後續保養不當或自然代謝導致之效果影響，本人願自行承擔，特此簽名同意。」</p>
+        <div class="sig-wrapper"><canvas id="f-sig-canvas"></canvas></div>
+        <div style="text-align:right; font-size:12px; color:var(--expense-color); cursor:pointer;" onclick="fSigPad.clear()">重新簽名</div>
+        
+        <button class="submit-btn" onclick="saveNewCustomer()">確認並建立客戶資料</button>
     </div>
 </div>
 
 <div id="sigModal" class="hidden loading-overlay" style="background:rgba(0,0,0,0.5);">
-    <div class="card" style="width:90%; max-width:400px;">
-        <h3 id="sigTitle" style="text-align:center;">簽名確認</h3>
+    <div class="card" style="width:90%; max-width:400px; text-align:center;">
+        <h3 id="modalTitle">簽名確認</h3>
         <div class="sig-wrapper"><canvas id="m-sig-canvas"></canvas></div>
         <div style="display:flex; gap:10px;">
-            <button class="submit-btn" style="background:#CCC;" onclick="closeSigModal()">取消</button>
-            <button class="submit-btn" id="sigConfirmBtn">儲存</button>
+            <button class="submit-btn" style="background:#CCC;" onclick="closeModal()">取消</button>
+            <button class="submit-btn" id="modalConfirmBtn">存檔</button>
         </div>
     </div>
 </div>
@@ -262,6 +248,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
     import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, query, orderBy, onSnapshot, getDocs, where } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
+    // 使用妳原本的 Firebase 配置
     const firebaseConfig = {
         apiKey: "AIzaSyBuiNU7dx3MYZCLWv1cqxjToYeaHOMLLE8",
         authDomain: "bianca-profit.firebaseapp.com",
@@ -310,16 +297,18 @@
         document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1)).classList.remove('hidden');
     };
 
-    // 刪除客戶
+    // 刪除保護
     window.deleteCustomer = async () => {
-        const pwd = prompt("確認刪除客戶？輸入密碼：");
+        const pwd = prompt("確認刪除此客戶所有資料？請輸入預設密碼：");
         if(pwd?.toLowerCase() === 'bianca2026') {
+            document.getElementById('loader').style.display = 'flex';
             await deleteDoc(doc(db, "customers", currentId));
             alert("已刪除"); showMainPage('list');
+            document.getElementById('loader').style.display = 'none';
         } else if(pwd) { alert("密碼錯誤"); }
     };
 
-    // 詳情加載
+    // 載入詳情
     window.viewDetail = async (id) => {
         const c = allCust.find(i => i.id === id);
         currentId = id;
@@ -329,19 +318,19 @@
         // 基本資料渲染
         document.getElementById('viewBasicContent').innerHTML = `
             <p><b>真實姓名：</b>${c.name}</p><p><b>暱稱：</b>${c.nickname || '無'}</p>
-            <p><b>生日：</b>${c.birthday}</p><p><b>連絡電話：</b>${c.phone}</p>
+            <p><b>生日：</b>${c.birthday}</p><p><b>電話：</b>${c.phone}</p>
             <hr style="border:0; border-top:1px solid #EEE;">
-            <p><small style="color:#999;">客戶簽名存檔：</small></p>
+            <p><small style="color:#999;">客戶最近一次存檔簽名：</small></p>
             <img src="${c.signature}" style="width:100%; border-radius:8px; border:1px solid #EEE;">
         `;
         
-        // 消費紀錄聯動
-        const q = query(recordsCol, where("customer", "==", c.name));
-        const snap = await getDocs(q);
-        document.getElementById('paymentArea').innerHTML = snap.docs.map(d => {
+        // 消費紀錄聯動 (同名搜尋收支系統)
+        const qHistory = query(recordsCol, where("customer", "==", c.name));
+        const historySnap = await getDocs(qHistory);
+        document.getElementById('paymentHistoryArea').innerHTML = historySnap.docs.map(d => {
             const r = d.data();
-            return `<div style="padding:10px; border-bottom:1px solid #EEE; font-size:12px;"><b>${r.date}</b> | ${r.items.join(',')} | <span style="color:#829D82">$${r.amount}</span></div>`;
-        }).join('') || '尚無結帳資料';
+            return `<div style="padding:10px; border-bottom:1px solid #EEE; font-size:12px;"><b>${r.date}</b> | ${(r.items || []).join(', ')} | <span style="color:#829D82">$${r.amount}</span></div>`;
+        }).join('') || '尚無結帳紀錄';
 
         switchTab('info');
     };
@@ -350,7 +339,7 @@
     window.saveNewCustomer = async () => {
         const name = document.getElementById('fName').value;
         const checks = Array.from(document.querySelectorAll('.fCheck')).every(c => c.checked);
-        if(!name || !checks || fSigPad.isEmpty()) return alert('請完整填寫、勾選所有注意事項並簽名');
+        if(!name || !checks || fSigPad.isEmpty()) return alert('請完整填寫、勾選所有條款並完成簽名');
 
         document.getElementById('loader').style.display = 'flex';
         try {
@@ -360,14 +349,14 @@
                 birthday: document.getElementById('fBirthday').value,
                 signature: fSigPad.toDataURL(),
                 createdAt: new Date(),
-                wallet: [], courses: []
+                memo: "", courses: [], wallet: []
             });
-            alert('新客建檔完成！'); showMainPage('list');
+            alert('客戶資料已成功存檔！'); showMainPage('list');
         } catch(e) { alert('儲存失敗'); }
         document.getElementById('loader').style.display = 'none';
     };
 
-    // 列表同步
+    // 列表同步渲染
     onSnapshot(query(customersCol, orderBy("createdAt", "desc")), (snap) => {
         allCust = snap.docs.map(d => ({ id: d.id, ...d.data() }));
         renderList();
@@ -377,16 +366,16 @@
         const list = document.getElementById('customerList');
         const s = document.getElementById('searchCust').value.toLowerCase();
         list.innerHTML = '';
-        allCust.filter(c => c.name.toLowerCase().includes(s) || c.phone.includes(s)).forEach(c => {
+        allCust.filter(c => c.name.toLowerCase().includes(s) || (c.phone && c.phone.includes(s))).forEach(c => {
             const div = document.createElement('div');
             div.className = 'customer-item';
             div.onclick = () => viewDetail(c.id);
-            div.innerHTML = `<b>${c.name}</b> <small style="color:#999; margin-left:10px;">${c.phone}</small>`;
+            div.innerHTML = `<b>${c.name}</b> <small style="color:#999; margin-left:10px;">${c.phone || ''}</small>`;
             list.appendChild(div);
         });
     };
 
-    window.closeSigModal = () => document.getElementById('sigModal').classList.add('hidden');
+    window.closeModal = () => document.getElementById('sigModal').classList.add('hidden');
 </script>
 </body>
 </html>
